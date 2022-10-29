@@ -1,6 +1,6 @@
 [<img src="https://cloud.githubusercontent.com/assets/1529454/5291635/1c426412-7b88-11e4-8d16-46161a081ece.gif" />](https://github.com/AbanoubNassem/filament-grecaptcha-field)
 
-# Provides a Google reCaptcha V2 field for the Filament Forms
+# Provides a Google reCaptcha V2 field for the Filament Forms, works in `Admin-Panel` and `Forntend-Forms`.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/abanoubnassem/filament-grecaptcha-field.svg?style=flat-square)](https://packagist.org/packages/abanoubnassem/filament-grecaptcha-field)
 [![Total Downloads](https://img.shields.io/packagist/dt/abanoubnassem/filament-grecaptcha-field.svg?style=flat-square)](https://packagist.org/packages/abanoubnassem/filament-grecaptcha-field)
@@ -36,10 +36,23 @@ NOCAPTCHA_SITEKEY=site-key
 ```php
 use AbanoubNassem\FilamentGRecaptchaField\Forms\Components\GRecaptcha;
 
-return $form->schema([
-    ...
-     GRecaptcha::make('captcha')
-])
+// admin panel
+    public static function form(Form $form): Form
+    {
+        return $form->schema([
+                    ...
+                    GRecaptcha::make('captcha')
+                ]);
+     }
+
+//forntend-forms 
+    protected function getFormSchema(): array
+    {
+        return [
+            ....
+             GRecaptcha::make('captcha')
+        ];
+    }
 ```
 
 
