@@ -6,7 +6,8 @@
         on('resetCaptcha', () => window.grecaptcha.reset())
     });
 
-    var recaptchaCallback = () =>@this.set('{{$getStatePath()}}', window.grecaptcha.getResponse(), true);
+    var recaptchaCallback = () => window.Livewire.find('{{$this->id}}')
+        .set('{{$getStatePath()}}', window.grecaptcha.getResponse(), true);
 
 </script>
 
