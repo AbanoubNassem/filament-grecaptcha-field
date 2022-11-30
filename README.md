@@ -46,6 +46,7 @@ use AbanoubNassem\FilamentGRecaptchaField\Forms\Components\GRecaptcha;
      }
 
 //forntend-forms 
+    public $captcha = ''; // must be initialized 
     protected function getFormSchema(): array
     {
         return [
