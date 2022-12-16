@@ -1,8 +1,4 @@
-@once
-    @push('scripts')
 {!! NoCaptcha::renderJs(app()->getLocale()) !!}
-    @endpush
-@endonce
 
 <script>
     document.addEventListener('livewire:load', function () {
@@ -10,7 +6,7 @@
         on('resetCaptcha', () => window.grecaptcha.reset())
     });
 
-    var {{$getStatePath()}}Callback = () => window.Livewire.find('{{$this->id}}')
+    var recaptchaCallback = () => window.Livewire.find('{{$this->id}}')
         .set('{{$getStatePath()}}', window.grecaptcha.getResponse(), true);
 
 </script>
@@ -31,11 +27,11 @@
     <div x-data="{ state: $wire.entangle('{{ $getStatePath() }}').defer }"
          x-on:next-wizard-step.window="window.grecaptcha.reset()"
          x-on:expand-concealing-component.window="
-                    error = $el.parentElement.querySelector('[data-validation-error]')
-                    if(! error) return;
-                    setTimeout(() => { $el.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' }); window.grecaptcha.reset(); }, 200)
+                error = $el.parentElement.querySelector('[data-validation-error]')
+                if(! error) return;
+                setTimeout(() => { $el.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' }); window.grecaptcha.reset(); }, 200)
                ">
-        {!! NoCaptcha::display(['data-callback' => "{$getStatePath()}Callback"]) !!}
+        {!! NoCaptcha::display(['data-callback' => 'recaptchaCallback']) !!}
     </div>
 </x-dynamic-component>
 
