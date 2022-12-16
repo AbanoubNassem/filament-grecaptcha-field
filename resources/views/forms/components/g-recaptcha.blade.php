@@ -25,6 +25,7 @@
     :state-path="$getStatePath()"
 >
     <div x-data="{ state: $wire.entangle('{{ $getStatePath() }}').defer }"
+         wire:ignore
          x-on:next-wizard-step.window="window.grecaptcha.reset()"
          x-on:expand-concealing-component.window="
                          if (document.body.querySelector('[data-validation-error]') !== null) {
