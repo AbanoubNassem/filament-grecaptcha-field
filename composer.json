@@ -22,7 +22,7 @@
     "require": {
         "php": "^8.0|^8.1",
         "anhskohbo/no-captcha": "^3.4",
-        "filament/forms": "^2.16",
+        "filament/forms": "^3.0",
         "illuminate/contracts": "^9.0|^10.0",
         "spatie/laravel-package-tools": "^1.13.0"
     },
