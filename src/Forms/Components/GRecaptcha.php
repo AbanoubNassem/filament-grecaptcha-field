@@ -22,7 +22,11 @@ class GRecaptcha extends Field
     {
         parent::callAfterStateUpdated();
 
-        $this->getLivewire()->dispatchFormEvent('resetCaptcha');
+        if (method_exists($this->getLivewire(), 'dispatchFormEvent')) {
+            $this->getLivewire()->dispatchFormEvent('resetCaptcha');
+        } else {
+            $this->getLivewire()->emit('resetCaptcha');
+        }
 
         return $this;
     }
