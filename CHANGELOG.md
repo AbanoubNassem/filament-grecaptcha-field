@@ -2,6 +2,18 @@
 
 All notable changes to `filament-grecaptcha-field` will be documented in this file.
 
+## v0.0.6 - 2023-08-20
+
+### What's Changed
+
+- Add compatibility filament 3.x 🌝 by @ILDaviz in https://github.com/AbanoubNassem/filament-grecaptcha-field/pull/8
+
+### New Contributors
+
+- @ILDaviz made their first contribution in https://github.com/AbanoubNassem/filament-grecaptcha-field/pull/8
+
+**Full Changelog**: https://github.com/AbanoubNassem/filament-grecaptcha-field/compare/v0.0.5...v0.0.6
+
 ## v0.0.5 - 2023-02-26
 
 ### What's Changed
