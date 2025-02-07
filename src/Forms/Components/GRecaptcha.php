@@ -18,12 +18,12 @@ class GRecaptcha extends Field
         $this->label('');
     }
 
-    public function callAfterStateUpdated(): static
+    public function callBeforeStateDehydrated(): static
     {
-        parent::callAfterStateUpdated();
+        parent::callBeforeStateDehydrated();
 
         if (method_exists($this->getLivewire(), 'dispatchFormEvent')) {
-            $this->getLivewire()->dispatchFormEvent('resetCaptcha');
+            $this->getLivewire()->dispatch('resetCaptcha');
         } else {
             $this->getLivewire()->emit('resetCaptcha');
         }

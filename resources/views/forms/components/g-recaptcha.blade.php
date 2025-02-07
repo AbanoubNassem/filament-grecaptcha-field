@@ -1,9 +1,17 @@
-{!! NoCaptcha::renderJs(app()->getLocale()) !!}
+@once
+    {!! NoCaptcha::renderJs(app()->getLocale()) !!}
+@endonce
 
 <script>
     document.addEventListener('livewire:load', function () {
-    @this.on('resetCaptcha', () => window.grecaptcha.reset())
+        @this.
+        on('resetCaptcha', () => window.grecaptcha.reset())
     });
+
+    document.addEventListener('livewire:initialized', () => {
+        @this.
+        on('resetCaptcha', () => window.grecaptcha.reset())
+    })
 
     var recaptchaCallback = () => window.Livewire.find('{{ method_exists($this, 'id') ? $this->id(): $this->id }}')
         .set('{{$getStatePath()}}', window.grecaptcha.getResponse(), true);
@@ -25,6 +33,7 @@
     :state-path="$getStatePath()"
 >
     <div x-data="{ state: $wire.entangle('{{ $getStatePath() }}').defer }"
+         x-on:reset-recaptcha="window.grecaptcha.reset()"
          wire:ignore
          x-on:next-wizard-step.window="window.grecaptcha.reset()"
          x-on:expand-concealing-component.window="

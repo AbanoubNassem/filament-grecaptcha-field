@@ -2,6 +2,10 @@
 
 All notable changes to `filament-grecaptcha-field` will be documented in this file.
 
+## v0.0.8 - 2025-02-07
+
+- Fix an issue where `captcha` value was not reset correctly.
+
 ## v0.0.7 - 2024-03-18
 
 - Add Laravel 11 Support
