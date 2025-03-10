@@ -2,6 +2,18 @@
 
 All notable changes to `filament-grecaptcha-field` will be documented in this file.
 
+## v0.0.9 - 2025-03-10
+
+### What's Changed
+
+* Bump dependencies for Laravel 12 by @alkoumi in https://github.com/AbanoubNassem/filament-grecaptcha-field/pull/15
+
+### New Contributors
+
+* @alkoumi made their first contribution in https://github.com/AbanoubNassem/filament-grecaptcha-field/pull/15
+
+**Full Changelog**: https://github.com/AbanoubNassem/filament-grecaptcha-field/compare/v0.0.8...v0.0.9
+
 ## v0.0.8 - 2025-02-07
 
 - Fix an issue where `captcha` value was not reset correctly.
