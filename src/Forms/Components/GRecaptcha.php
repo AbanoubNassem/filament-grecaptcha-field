@@ -23,7 +23,7 @@ class GRecaptcha extends Field
         parent::callBeforeStateDehydrated();
 
         if (method_exists($this->getLivewire(), 'dispatchFormEvent')) {
-            $this->getLivewire()->dispatch('resetCaptcha');
+            $this->getLivewire()->dispatchFormEvent('resetCaptcha');
         } else {
             $this->getLivewire()->emit('resetCaptcha');
         }
