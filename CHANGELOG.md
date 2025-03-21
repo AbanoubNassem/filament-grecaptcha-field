@@ -2,6 +2,14 @@
 
 All notable changes to `filament-grecaptcha-field` will be documented in this file.
 
+## v0.0.10 - 2025-03-21
+
+### What's Changed
+
+* Fix: Use dispatchFormEvent method by @icaliman in https://github.com/AbanoubNassem/filament-grecaptcha-field/pull/16
+
+**Full Changelog**: https://github.com/AbanoubNassem/filament-grecaptcha-field/compare/v0.0.9...v0.0.10
+
 ## v0.0.9 - 2025-03-10
 
 ### What's Changed
