@@ -2,6 +2,19 @@
 
 All notable changes to `filament-grecaptcha-field` will be documented in this file.
 
+## v0.0.12 - 2026-04-23
+
+### What's Changed
+
+* Update composer.json Filament 5.0 by @Jacotheron in https://github.com/AbanoubNassem/filament-grecaptcha-field/pull/17
+* Add Laravel 13 and PHP 8.4 support by @chengkangzai in https://github.com/AbanoubNassem/filament-grecaptcha-field/pull/18
+
+### New Contributors
+
+* @Jacotheron made their first contribution in https://github.com/AbanoubNassem/filament-grecaptcha-field/pull/17
+
+**Full Changelog**: https://github.com/AbanoubNassem/filament-grecaptcha-field/compare/v0.0.11...v0.0.12
+
 ## v0.0.11 - 2025-08-23
 
 ### v0.0.11 - 2025-08-23
