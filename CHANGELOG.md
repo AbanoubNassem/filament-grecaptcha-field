@@ -2,6 +2,14 @@
 
 All notable changes to `filament-grecaptcha-field` will be documented in this file.
 
+## v0.0.13 - 2026-11-03
+
+### What's Changed
+
+* Skip grecaptcha.reset() when no widget is in the DOM by @chengkangzai in https://github.com/AbanoubNassem/filament-grecaptcha-field/pull/19
+
+**Full Changelog**: https://github.com/AbanoubNassem/filament-grecaptcha-field/compare/v0.0.12...v0.0.13
+
 ## v0.0.12 - 2026-04-23
 
 ### What's Changed
